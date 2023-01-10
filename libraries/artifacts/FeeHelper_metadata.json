@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Liquidity Book Fee Helper Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Helper contract used for fees calculation",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/libraries/FeeHelper.sol": "FeeHelper"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"Midas/joe-v2-main/src/LBErrors.sol": {
+			"keccak256": "0xdef68e9e8f585f2bbfa294a1df13a774e9d6ed3d0bc495da5243842907bcc93e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://653c91baa2876d0c4c6272c141eade4a4471a81518ed664f5a56c38d0576e34e",
+				"dweb:/ipfs/QmZtNra5hMkERWdgEKZFWxepFohM2zqwFWNj8uRpFxN2MP"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFactory.sol": {
+			"keccak256": "0x9155876248e3ec62c8d366065566bfd358cfbe3e8ddf395c522c6f4e1d1c3c79",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59605401f1a6dba892de95d0c8f8290481cec679913537b39a9145644ca21045",
+				"dweb:/ipfs/QmX5TAV5H52aDrPDQzpxbkzPkVL3nQosG5Yhpp5PbtMULB"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFlashLoanCallback.sol": {
+			"keccak256": "0x0ad4de9217ea804336d10f8200c442f1be75a22fed5d64e0d9d5334f6fcc7f55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aab52dd79579de997ec44e79275ea8d08bd2da05cf6b3ba821bea01e5639748d",
+				"dweb:/ipfs/QmazDbWMPGanUbq3iVuSAbZtpLCihy3HYSbH5RvHsLUqRt"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBPair.sol": {
+			"keccak256": "0x78e800a0c8c16227c4fa913a65e0b2de49e9e1240bd7279bc219f73a5d0ad3a2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d9f400c1c08e4b27b9ca8e77e944f95054415316d0bb69c3299b1a3a1675aaa7",
+				"dweb:/ipfs/QmfKcwJHp8pJqd31sYFd4m8mRZ8wjG3RjHwbbwAPPbj1NL"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/IPendingOwnable.sol": {
+			"keccak256": "0x4c51408f2586a703c922f504c61f92811c53680d2f604aa436baa7dda89f10cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://893108ef6befefd6a154d754271dba3505df7c55f53ed3af7c700cbcc1c5ed42",
+				"dweb:/ipfs/QmURW3zDuVNdgi2n8GEihihbTZ8mxvpjUrbQAqs2t4pKnP"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x05fa546412c82d738c03919239bbbe83c1caaf8982af3e85d4ef72709c3e62bc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d893bed925dd278876702a8cb9fab494bf754fadd82d008224600bd902aabb2a",
+				"dweb:/ipfs/QmYgjkHieFSK8zFv2M3UNdNKRspgJuF4S4qNDbvweBQj79"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeCast.sol": {
+			"keccak256": "0x171ac968ef2f498a9ff6f8aca58eaa6070bfa245781d701f74cfca62f7ff85f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4fca7527eb62b9f1bd20ab72fe5024f64e03de0666991b3a54fc63864ff78d6",
+				"dweb:/ipfs/QmWBxZ4BXd3SMm9XSWmCzULCNpyj5ocTohr26mPoye7vJq"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		}
+	},
+	"version": 1
+}

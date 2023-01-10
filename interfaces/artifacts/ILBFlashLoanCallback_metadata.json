@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "LBFlashLoanCallback",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Liquidity Book Flashloan Callback Interface",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Required interface to interact with LB flash loans",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/interfaces/ILBFlashLoanCallback.sol": "ILBFlashLoanCallback"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFlashLoanCallback.sol": {
+			"keccak256": "0x0ad4de9217ea804336d10f8200c442f1be75a22fed5d64e0d9d5334f6fcc7f55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aab52dd79579de997ec44e79275ea8d08bd2da05cf6b3ba821bea01e5639748d",
+				"dweb:/ipfs/QmazDbWMPGanUbq3iVuSAbZtpLCihy3HYSbH5RvHsLUqRt"
+			]
+		}
+	},
+	"version": 1
+}

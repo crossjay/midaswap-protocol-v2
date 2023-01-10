@@ -1,0 +1,160 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Liquidity Book Oracle Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Helper contract for oracle",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/libraries/Oracle.sol": "Oracle"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"Midas/joe-v2-main/src/LBErrors.sol": {
+			"keccak256": "0xdef68e9e8f585f2bbfa294a1df13a774e9d6ed3d0bc495da5243842907bcc93e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://653c91baa2876d0c4c6272c141eade4a4471a81518ed664f5a56c38d0576e34e",
+				"dweb:/ipfs/QmZtNra5hMkERWdgEKZFWxepFohM2zqwFWNj8uRpFxN2MP"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFactory.sol": {
+			"keccak256": "0x9155876248e3ec62c8d366065566bfd358cfbe3e8ddf395c522c6f4e1d1c3c79",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59605401f1a6dba892de95d0c8f8290481cec679913537b39a9145644ca21045",
+				"dweb:/ipfs/QmX5TAV5H52aDrPDQzpxbkzPkVL3nQosG5Yhpp5PbtMULB"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFlashLoanCallback.sol": {
+			"keccak256": "0x0ad4de9217ea804336d10f8200c442f1be75a22fed5d64e0d9d5334f6fcc7f55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aab52dd79579de997ec44e79275ea8d08bd2da05cf6b3ba821bea01e5639748d",
+				"dweb:/ipfs/QmazDbWMPGanUbq3iVuSAbZtpLCihy3HYSbH5RvHsLUqRt"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBPair.sol": {
+			"keccak256": "0x2106d3a80846d1398ae6b4e5d1d80500bfbeba1ba267231a06650f4aafb7c666",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c799e67fb042ab0621094d77f300c69c8fbe35eee7074d3d6c1707e3b252dbe3",
+				"dweb:/ipfs/QmPApDwwqv3aDNGFJ2weXjrkBW59ywgy5eBV6D2Qp8tBsg"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/IPendingOwnable.sol": {
+			"keccak256": "0x4c51408f2586a703c922f504c61f92811c53680d2f604aa436baa7dda89f10cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://893108ef6befefd6a154d754271dba3505df7c55f53ed3af7c700cbcc1c5ed42",
+				"dweb:/ipfs/QmURW3zDuVNdgi2n8GEihihbTZ8mxvpjUrbQAqs2t4pKnP"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Buffer.sol": {
+			"keccak256": "0x36edf2141d17dd426dad41fe7feadabc6a4f0206c74f6bfec7ae7a8cd7560e68",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://43b9cc7bc322edc5c2a2d1d6a04d0ca41b283f37fcc5daa5d83ed9f32f731000",
+				"dweb:/ipfs/Qme23hcAkQLCjoM6mvTZGYpqGw81KRJmVrzy6q9oxWFMtu"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Decoder.sol": {
+			"keccak256": "0xe12ecacbd1d520251a148fb671f682fac728e48ec3e7bfcfdd8f9765fe2b5e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e63ed2ea395acf3a99ef623c94740ebf4b1b2fff1913b6cff3b305950862210",
+				"dweb:/ipfs/QmfPcMVaAwJ7nGhhgpNg7bxXHPKPi4NeShtzuy1wX8n9MZ"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Encoder.sol": {
+			"keccak256": "0xf0d8d1fa36901a5c3e5384462fe86225b3ec9451263be8919c8f0e23e4320d11",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cbbe0f3c8e627da4bfc7ab940ecbe92c78e41cf283519c44e2db323f94e673f7",
+				"dweb:/ipfs/Qmbd7vFVU617bYAtFXhXNQm499qr1Qkoo1FKnjBVerNpZJ"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x383f67a57d2f9563469cd736f7b862bccf8e7f22c91736eb24c54d73eaf58b2d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1845d70290abcaa473742ad6ac8bb3bcaa97bdfbb43db2435b9b88b968a8330b",
+				"dweb:/ipfs/QmdSQRW8FTV6ceP3a3SscDgJYcyZkLZi2GjXUzeojpZ3sh"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Oracle.sol": {
+			"keccak256": "0xa34656921f96354a76ffd928de3d6a0b5c1304cb7bb973c385d34e600b35a20f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://85929d794ffc6aededb476f499b25a6dfcec15945487be05b13fcd7bf561c051",
+				"dweb:/ipfs/Qmeiy8DpE6AGEx7YStGXNpoEzgt6yCaNukLVSusLQX2ZZu"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeCast.sol": {
+			"keccak256": "0x171ac968ef2f498a9ff6f8aca58eaa6070bfa245781d701f74cfca62f7ff85f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4fca7527eb62b9f1bd20ab72fe5024f64e03de0666991b3a54fc63864ff78d6",
+				"dweb:/ipfs/QmWBxZ4BXd3SMm9XSWmCzULCNpyj5ocTohr26mPoye7vJq"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Samples.sol": {
+			"keccak256": "0xc10478b358710ef0c558c3c52c1ead881d3bccccc7d951923aca53d21f2ffafe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29beee63e29b37a3717ef08af651d7fa240723ca04a7d0755e035b32a47d05bd",
+				"dweb:/ipfs/QmUjjtEQAH6ZaLoUUrsDrPyJf4FbtTiGDaMSYkCAWEfinw"
+			]
+		}
+	},
+	"version": 1
+}

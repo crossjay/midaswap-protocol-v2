@@ -1,0 +1,168 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Liquidity Book Swap Helper Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Helper contract used for calculating swaps, fees and reserves changes",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/libraries/SwapHelper.sol": "SwapHelper"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"Midas/joe-v2-main/src/LBErrors.sol": {
+			"keccak256": "0xdef68e9e8f585f2bbfa294a1df13a774e9d6ed3d0bc495da5243842907bcc93e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://653c91baa2876d0c4c6272c141eade4a4471a81518ed664f5a56c38d0576e34e",
+				"dweb:/ipfs/QmZtNra5hMkERWdgEKZFWxepFohM2zqwFWNj8uRpFxN2MP"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFactory.sol": {
+			"keccak256": "0xff92a428969913e0f62321214288d172379e9c0a84ef8b54cbea7634c55511f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f369dc60392b62e118b75d2623e4831d41120b9b5f802ad088ebc1e2e9590ffe",
+				"dweb:/ipfs/QmPRXueysBDkwtQmXQ83FzFw8pk2bpSnsXU6N4mmJeayra"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFlashLoanCallback.sol": {
+			"keccak256": "0x0ad4de9217ea804336d10f8200c442f1be75a22fed5d64e0d9d5334f6fcc7f55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aab52dd79579de997ec44e79275ea8d08bd2da05cf6b3ba821bea01e5639748d",
+				"dweb:/ipfs/QmazDbWMPGanUbq3iVuSAbZtpLCihy3HYSbH5RvHsLUqRt"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBPair.sol": {
+			"keccak256": "0xa1820d518ee8446623cc021b4b9d66e49b23cbdc28c5a49b2877d5d63312a6f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5c9e58707685d956b641ddbce959720d61922e359141411c980da549bdf20c31",
+				"dweb:/ipfs/QmVozer8dDmhy72YQTNYeavXoXTU3cvinX4aXWpQp9QRPk"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/IPendingOwnable.sol": {
+			"keccak256": "0x4c51408f2586a703c922f504c61f92811c53680d2f604aa436baa7dda89f10cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://893108ef6befefd6a154d754271dba3505df7c55f53ed3af7c700cbcc1c5ed42",
+				"dweb:/ipfs/QmURW3zDuVNdgi2n8GEihihbTZ8mxvpjUrbQAqs2t4pKnP"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/BinHelper.sol": {
+			"keccak256": "0xe364497f7c55d363711aea744090c9e6e0270a62b6a350074f3db9d9b7f13aec",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://38ca88d51bbef9b3b26b629af0df9c9572599d6f6d8dfdf2111f4626b34a49f9",
+				"dweb:/ipfs/QmamJBBBqh4D3LNg3cJLaiJdryMjfa8LTVuMPR2iwvpe81"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/BitMath.sol": {
+			"keccak256": "0xf6a2d3055de0fa5f3ba8791901f7694a40dbfca7d6a447a17c70993325fc02f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b551bc04ac6e4c6848d48bc83b941d5a2950ffe5a5cd57f8e42d66e82d1c1084",
+				"dweb:/ipfs/QmZb8SGo4e3eiqrB62r1A4Txx3zMMZJtSavEXAcvbovL9J"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/FeeDistributionHelper.sol": {
+			"keccak256": "0x388759a86992f874dd66102f3270bb272d7d3470f89b2742ce16fd59c0437f1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b872c7f7bee73bb23a9d578cd9ed74e90993d14e7e66d7a98d393a75d678cb0",
+				"dweb:/ipfs/QmXee99JjK3SJX5xS3eMHwnyJ51bYCvT6j5qkuvg11t8wn"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x05fa546412c82d738c03919239bbbe83c1caaf8982af3e85d4ef72709c3e62bc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d893bed925dd278876702a8cb9fab494bf754fadd82d008224600bd902aabb2a",
+				"dweb:/ipfs/QmYgjkHieFSK8zFv2M3UNdNKRspgJuF4S4qNDbvweBQj79"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Math128x128.sol": {
+			"keccak256": "0x33202d8738fe0334bff67f2ad4568f2669ef00b86ad252803a217cd9a913921f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e32450665cc7ae8c0b9907ea0451dbe5ea29aea21f3967ccb764729d54bff30",
+				"dweb:/ipfs/QmPh5GkHYYCqf2328usjFpGi3BLKgKakjsFHBKjp7regK1"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Math512Bits.sol": {
+			"keccak256": "0x2a00e56dc0280a311b6c750dcd753a67cf0e67dc27a18b6ac531773275d7e389",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d5dac5d5f31b457992dadc950b1a00019360c0a8999e6b49533d1f45fa4a4f9f",
+				"dweb:/ipfs/QmbahMDjLC33HNSciBSJDta4TBHokJfyDvAhnWDRem4dzm"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeCast.sol": {
+			"keccak256": "0x171ac968ef2f498a9ff6f8aca58eaa6070bfa245781d701f74cfca62f7ff85f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4fca7527eb62b9f1bd20ab72fe5024f64e03de0666991b3a54fc63864ff78d6",
+				"dweb:/ipfs/QmWBxZ4BXd3SMm9XSWmCzULCNpyj5ocTohr26mPoye7vJq"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SwapHelper.sol": {
+			"keccak256": "0xa42042f94baa8275ec12a18eaaa370313e8763b0bc2e24594f2343e7cb382143",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0a61653f607ee720eb9f94ddcdcd42035a01dae383db456821d573b9c6c11e6",
+				"dweb:/ipfs/QmdF35iTxbdnqe9kUCtdULNaHgrG7NyDW4JaLCRK5cxBFH"
+			]
+		}
+	},
+	"version": 1
+}

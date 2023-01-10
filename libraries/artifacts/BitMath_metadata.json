@@ -1,0 +1,48 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Liquidity Book Bit Math Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Helper contract used for bit calculations",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/libraries/BitMath.sol": "BitMath"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Midas/joe-v2-main/src/libraries/BitMath.sol": {
+			"keccak256": "0xf6a2d3055de0fa5f3ba8791901f7694a40dbfca7d6a447a17c70993325fc02f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b551bc04ac6e4c6848d48bc83b941d5a2950ffe5a5cd57f8e42d66e82d1c1084",
+				"dweb:/ipfs/QmZb8SGo4e3eiqrB62r1A4Txx3zMMZJtSavEXAcvbovL9J"
+			]
+		}
+	},
+	"version": 1
+}

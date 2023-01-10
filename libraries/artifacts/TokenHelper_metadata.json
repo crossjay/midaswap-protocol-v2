@@ -1,0 +1,128 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Safe Transfer",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Wrappers around ERC20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using TokenHelper for IERC20;` statement to your contract, which allows you to call the safe operation as `token.safeTransfer(...)`",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/libraries/TokenHelper.sol": "TokenHelper"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Midas/joe-v2-main/lib/openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"Midas/joe-v2-main/src/LBErrors.sol": {
+			"keccak256": "0xdef68e9e8f585f2bbfa294a1df13a774e9d6ed3d0bc495da5243842907bcc93e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://653c91baa2876d0c4c6272c141eade4a4471a81518ed664f5a56c38d0576e34e",
+				"dweb:/ipfs/QmZtNra5hMkERWdgEKZFWxepFohM2zqwFWNj8uRpFxN2MP"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFactory.sol": {
+			"keccak256": "0x9f70875bce0feede80e306e11f0fa72f072a1c7d867aed2c0b17d4e09ea507b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6fcc15dafb7fafb104dd9b26f8251c81e07ad7e8fd950f6905febe340f68550a",
+				"dweb:/ipfs/QmefTJetPTSo8g4Vf9DvecGi58ef7xxC95pbRCq86VxCoZ"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFlashLoanCallback.sol": {
+			"keccak256": "0xb0e165e6469b9f4ea55ae9bb169deb948e1eac3254d5109e34da5344d7c181a7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b56db4c891928bc4d0697926fd4f8c78970fb67bc774cdcf61df2e42e4879232",
+				"dweb:/ipfs/QmcDDT8Tpv497Z33nYGf45ZsRXPBPJZbf3mCEpnK14SoPA"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBPair.sol": {
+			"keccak256": "0x247821612d33d9a3a0759ada1e6c7c3753f24856255025335d06efde2b9096a3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://81a0d2107871a0bbc9ff28f6be44267d43fbb31a9af0eef65246b1d06918e4f9",
+				"dweb:/ipfs/QmUPyDZMfWUwUeab7sfoPncqt7pyRG6XDrptFEEDNTn3L8"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/IPendingOwnable.sol": {
+			"keccak256": "0x4c51408f2586a703c922f504c61f92811c53680d2f604aa436baa7dda89f10cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://893108ef6befefd6a154d754271dba3505df7c55f53ed3af7c700cbcc1c5ed42",
+				"dweb:/ipfs/QmURW3zDuVNdgi2n8GEihihbTZ8mxvpjUrbQAqs2t4pKnP"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x383f67a57d2f9563469cd736f7b862bccf8e7f22c91736eb24c54d73eaf58b2d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1845d70290abcaa473742ad6ac8bb3bcaa97bdfbb43db2435b9b88b968a8330b",
+				"dweb:/ipfs/QmdSQRW8FTV6ceP3a3SscDgJYcyZkLZi2GjXUzeojpZ3sh"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeCast.sol": {
+			"keccak256": "0x171ac968ef2f498a9ff6f8aca58eaa6070bfa245781d701f74cfca62f7ff85f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4fca7527eb62b9f1bd20ab72fe5024f64e03de0666991b3a54fc63864ff78d6",
+				"dweb:/ipfs/QmWBxZ4BXd3SMm9XSWmCzULCNpyj5ocTohr26mPoye7vJq"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/TokenHelper.sol": {
+			"keccak256": "0xdf08e64fb06aec8165f9975186349137a3a52387e45685578882e969eee7075f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2bbd03ad5df93d781a3f45e17c79b3c0fce63ea28683c4b91d7a2000903570d",
+				"dweb:/ipfs/Qmcbuagv9BeGtH6f6dycig9JC7xgCnRgokenMjRr2aYF6h"
+			]
+		}
+	},
+	"version": 1
+}

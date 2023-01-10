@@ -1,0 +1,1683 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract ILBFactory",
+						"name": "_factory",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IWETH",
+						"name": "_weth",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "BinHelper__IdOverflows",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountXMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountX",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountYMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountY",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__AmountSlippageCaught",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__BinReserveOverflows",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LBRouter__BrokenSwapSafetyCheck",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentTimestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__DeadlineExceeded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "idDesired",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "idSlippage",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__IdDesiredOverflows",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "id",
+						"type": "int256"
+					}
+				],
+				"name": "LBRouter__IdOverflows",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "activeIdDesired",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "idSlippage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "activeId",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__IdSlippageCaught",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__InsufficientAmountOut",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "wrongToken",
+						"type": "address"
+					}
+				],
+				"name": "LBRouter__InvalidTokenPath",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LBRouter__LengthsMismatch",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountInMax",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__MaxAmountInExceeded",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LBRouter__NotFactoryOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__SwapOverflows",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "excess",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__TooMuchTokensIn",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserve",
+						"type": "uint256"
+					}
+				],
+				"name": "LBRouter__WrongAmounts",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LBRouter__WrongTokenOrder",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Math128x128__LogUnderflow",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "y",
+						"type": "int256"
+					}
+				],
+				"name": "Math128x128__PowerUnderflow",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "prod1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "denominator",
+						"type": "uint256"
+					}
+				],
+				"name": "Math512Bits__MulDivOverflow",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "prod1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "offset",
+						"type": "uint256"
+					}
+				],
+				"name": "Math512Bits__MulShiftOverflow",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "offset",
+						"type": "uint256"
+					}
+				],
+				"name": "Math512Bits__OffsetOverflows",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "SafeCast__Exceeds128Bits",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TokenHelper__CallFailed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TokenHelper__NonContract",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TokenHelper__TransferFailed",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "contract IERC20",
+								"name": "tokenX",
+								"type": "address"
+							},
+							{
+								"internalType": "contract IERC20",
+								"name": "tokenY",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "binStep",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountX",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountY",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountXMin",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountYMin",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "activeIdDesired",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "idSlippage",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256[]",
+								"name": "deltaIds",
+								"type": "int256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "distributionX",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "distributionY",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deadline",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ILBRouter.LiquidityParameters",
+						"name": "_liquidityParameters",
+						"type": "tuple"
+					}
+				],
+				"name": "addLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "depositIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "liquidityMinted",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "contract IERC20",
+								"name": "tokenX",
+								"type": "address"
+							},
+							{
+								"internalType": "contract IERC20",
+								"name": "tokenY",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "binStep",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountX",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountY",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountXMin",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amountYMin",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "activeIdDesired",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "idSlippage",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256[]",
+								"name": "deltaIds",
+								"type": "int256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "distributionX",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "distributionY",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deadline",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ILBRouter.LiquidityParameters",
+						"name": "_liquidityParameters",
+						"type": "tuple"
+					}
+				],
+				"name": "addLiquidityETH",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "depositIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "liquidityMinted",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24",
+						"name": "_activeId",
+						"type": "uint24"
+					}
+				],
+				"name": "createLBPair",
+				"outputs": [
+					{
+						"internalType": "contract ILBPair",
+						"name": "pair",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "factory",
+				"outputs": [
+					{
+						"internalType": "contract ILBFactory",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "getIdFromPrice",
+				"outputs": [
+					{
+						"internalType": "uint24",
+						"name": "",
+						"type": "uint24"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint24",
+						"name": "_id",
+						"type": "uint24"
+					}
+				],
+				"name": "getPriceFromId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ILBPair",
+						"name": "_LBPair",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountOut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_swapForY",
+						"type": "bool"
+					}
+				],
+				"name": "getSwapIn",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "feesIn",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ILBPair",
+						"name": "_LBPair",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_swapForY",
+						"type": "bool"
+					}
+				],
+				"name": "getSwapOut",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "feesIn",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountXMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountYMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_ids",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountX",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountY",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountTokenMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountETHMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_ids",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidityETH",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountToken",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountETH",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountOut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapETHForExactTokens",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amountsIn",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactETHForTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactETHForTokensSupportingFeeOnTransferTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountOutMinETH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForETH",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountOutMinETH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForETHSupportingFeeOnTransferTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountETHOut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountInMax",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapTokensForExactETH",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amountsIn",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amountOut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountInMax",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20[]",
+						"name": "_tokenPath",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapTokensForExactTokens",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amountsIn",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "sweep",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "weth",
+				"outputs": [
+					{
+						"internalType": "contract IWETH",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {
+				"addLiquidity((address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,int256[],uint256[],uint256[],address,uint256))": {
+					"details": "This function is compliant with fee on transfer tokens",
+					"params": {
+						"_liquidityParameters": "The liquidity parameters"
+					},
+					"returns": {
+						"depositIds": "Bin ids where the liquidity was actually deposited",
+						"liquidityMinted": "Amounts of LBToken minted for each bin"
+					}
+				},
+				"addLiquidityETH((address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,int256[],uint256[],uint256[],address,uint256))": {
+					"details": "This function is compliant with fee on transfer tokens",
+					"params": {
+						"_liquidityParameters": "The liquidity parameters"
+					},
+					"returns": {
+						"depositIds": "Bin ids where the liquidity was actually deposited",
+						"liquidityMinted": "Amounts of LBToken minted for each bin"
+					}
+				},
+				"constructor": {
+					"params": {
+						"_factory": "LBFactory address",
+						"_weth": "Address of WETH"
+					}
+				},
+				"createLBPair(address,address,uint24)": {
+					"params": {
+						"_activeId": "The active id of the pair",
+						"_tokenX": "The address of the first token",
+						"_tokenY": "The address of the second token"
+					},
+					"returns": {
+						"pair": "The address of the newly created LBPair"
+					}
+				},
+				"getIdFromPrice(uint256)": {
+					"params": {
+						"_price": "The price of y per x (multiplied by 1e36)"
+					},
+					"returns": {
+						"_0": "The id corresponding to this price"
+					}
+				},
+				"getPriceFromId(uint24)": {
+					"params": {
+						"_id": "The id"
+					},
+					"returns": {
+						"_0": "The price corresponding to this id"
+					}
+				},
+				"getSwapIn(address,uint256,bool)": {
+					"params": {
+						"_LBPair": "The address of the LBPair",
+						"_amountOut": "The amount of token to receive",
+						"_swapForY": "Whether you swap X for Y (true), or Y for X (false)"
+					},
+					"returns": {
+						"amountIn": "The amount of token to send in order to receive _amountOut token",
+						"feesIn": "The amount of fees paid in token sent"
+					}
+				},
+				"getSwapOut(address,uint256,bool)": {
+					"params": {
+						"_LBPair": "The address of the LBPair",
+						"_amountIn": "The amount of token sent",
+						"_swapForY": "Whether you swap X for Y (true), or Y for X (false)"
+					},
+					"returns": {
+						"amountOut": "The amount of token received if _amountIn tokenX are sent",
+						"feesIn": "The amount of fees paid in token sent"
+					}
+				},
+				"removeLiquidity(address,address,uint256,uint256,uint256[],uint256[],address,uint256)": {
+					"details": "This function is compliant with fee on transfer tokens",
+					"params": {
+						"_amountXMin": "The min amount to receive of token X",
+						"_amountYMin": "The min amount to receive of token Y",
+						"_amounts": "The list of amounts to burn of each id in `_ids`",
+						"_deadline": "The deadline of the tx",
+						"_ids": "The list of ids to burn",
+						"_to": "The address of the recipient",
+						"_tokenX": "The address of token X",
+						"_tokenY": "The address of token Y"
+					},
+					"returns": {
+						"amountX": "Amount of token X returned",
+						"amountY": "Amount of token Y returned"
+					}
+				},
+				"removeLiquidityETH(address,uint256,uint256,uint256[],uint256[],address,uint256)": {
+					"details": "This function is **NOT** compliant with fee on transfer tokens. This is wanted as it would make users pays the fee on transfer twice, use the `removeLiquidity` function to remove liquidity with fee on transfer tokens.",
+					"params": {
+						"_amountETHMin": "The min amount to receive of ETH",
+						"_amountTokenMin": "The min amount to receive of token",
+						"_amounts": "The list of amounts to burn of each id in `_ids`",
+						"_deadline": "The deadline of the tx",
+						"_ids": "The list of ids to burn",
+						"_to": "The address of the recipient",
+						"_token": "The address of token"
+					},
+					"returns": {
+						"amountETH": "Amount of ETH returned",
+						"amountToken": "Amount of token returned"
+					}
+				},
+				"swapETHForExactTokens(uint256,address[],address,uint256)": {
+					"details": "Will refund any ETH amount sent in excess to `msg.sender`",
+					"params": {
+						"_amountOut": "The amount of tokens to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountsIn": "Input amounts for every step of the swap"
+					}
+				},
+				"swapExactETHForTokens(uint256,address[],address,uint256)": {
+					"params": {
+						"_amountOutMin": "The min amount of token to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountOut": "Output amount of the swap"
+					}
+				},
+				"swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)": {
+					"params": {
+						"_amountOutMin": "The min amount of token to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountOut": "Output amount of the swap"
+					}
+				},
+				"swapExactTokensForETH(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"_amountIn": "The amount of token to send",
+						"_amountOutMinETH": "The min amount of ETH to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountOut": "Output amount of the swap"
+					}
+				},
+				"swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"_amountIn": "The amount of token to send",
+						"_amountOutMinETH": "The min amount of ETH to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountOut": "Output amount of the swap"
+					}
+				},
+				"swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"_amountIn": "The amount of token to send",
+						"_amountOutMin": "The min amount of token to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountOut": "Output amount of the swap"
+					}
+				},
+				"swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"_amountIn": "The amount of token to send",
+						"_amountOutMin": "The min amount of token to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountOut": "Output amount of the swap"
+					}
+				},
+				"swapTokensForExactETH(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"_amountETHOut": "The amount of ETH to receive",
+						"_amountInMax": "The max amount of token to send",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountsIn": "Input amounts for every step of the swap"
+					}
+				},
+				"swapTokensForExactTokens(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"_amountInMax": "The max amount of token to send",
+						"_amountOut": "The amount of token to receive",
+						"_deadline": "The deadline of the tx",
+						"_to": "The address of the recipient",
+						"_tokenPath": "The swap path using the binSteps following `_pairBinSteps`"
+					},
+					"returns": {
+						"amountsIn": "Input amounts for every step of the swap"
+					}
+				},
+				"sweep(address,address,uint256)": {
+					"details": "Only callable by the factory owner",
+					"params": {
+						"_amount": "The amount to send",
+						"_to": "The address of the user to send back the tokens",
+						"_token": "The address of the token"
+					}
+				}
+			},
+			"title": "Liquidity Book Router",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"Math128x128__PowerUnderflow(uint256,int256)": [
+					{
+						"notice": "Math128x128 errors "
+					}
+				],
+				"Math512Bits__MulDivOverflow(uint256,uint256)": [
+					{
+						"notice": "Math512Bits errors "
+					}
+				],
+				"TokenHelper__NonContract()": [
+					{
+						"notice": "TokenHelper errors "
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"addLiquidity((address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,int256[],uint256[],uint256[],address,uint256))": {
+					"notice": "Add liquidity while performing safety checks"
+				},
+				"addLiquidityETH((address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,int256[],uint256[],uint256[],address,uint256))": {
+					"notice": "Add liquidity with ETH while performing safety checks"
+				},
+				"constructor": {
+					"notice": "Constructor"
+				},
+				"createLBPair(address,address,uint24)": {
+					"notice": "Create a liquidity bin LBPair for _tokenX and _tokenY using the factory"
+				},
+				"getIdFromPrice(uint256)": {
+					"notice": "Returns the approximate id corresponding to the inputted price. Warning, the returned id may be inaccurate close to the start price of a bin"
+				},
+				"getPriceFromId(uint24)": {
+					"notice": "Returns the price corresponding to the inputted id"
+				},
+				"getSwapIn(address,uint256,bool)": {
+					"notice": "Simulate a swap in"
+				},
+				"getSwapOut(address,uint256,bool)": {
+					"notice": "Simulate a swap out"
+				},
+				"removeLiquidity(address,address,uint256,uint256,uint256[],uint256[],address,uint256)": {
+					"notice": "Remove liquidity while performing safety checks"
+				},
+				"removeLiquidityETH(address,uint256,uint256,uint256[],uint256[],address,uint256)": {
+					"notice": "Remove ETH liquidity while performing safety checks"
+				},
+				"swapETHForExactTokens(uint256,address[],address,uint256)": {
+					"notice": "Swaps ETH for exact tokens while performing safety checks"
+				},
+				"swapExactETHForTokens(uint256,address[],address,uint256)": {
+					"notice": "Swaps exact ETH for tokens while performing safety checks"
+				},
+				"swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)": {
+					"notice": "Swaps exact ETH for tokens while performing safety checks supporting for fee on transfer tokens"
+				},
+				"swapExactTokensForETH(uint256,uint256,address[],address,uint256)": {
+					"notice": "Swaps exact tokens for ETH while performing safety checks"
+				},
+				"swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+					"notice": "Swaps exact tokens for ETH while performing safety checks supporting for fee on transfer tokens"
+				},
+				"swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+					"notice": "Swaps exact tokens for tokens while performing safety checks"
+				},
+				"swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)": {
+					"notice": "Swaps exact tokens for tokens while performing safety checks supporting for fee on transfer tokens"
+				},
+				"swapTokensForExactETH(uint256,uint256,address[],address,uint256)": {
+					"notice": "Swaps tokens for exact ETH while performing safety checks"
+				},
+				"swapTokensForExactTokens(uint256,uint256,address[],address,uint256)": {
+					"notice": "Swaps tokens for exact tokens while performing safety checks"
+				},
+				"sweep(address,address,uint256)": {
+					"notice": "Unstuck tokens that are sent to this contract by mistake"
+				}
+			},
+			"notice": "Main contract to interact with to swap and manage liquidity on Joe V2 exchange.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"midas-joe-v2/src/LBRouter.sol": "LBRouter"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"midas-joe-v2/src/LBErrors.sol": {
+			"keccak256": "0xdef68e9e8f585f2bbfa294a1df13a774e9d6ed3d0bc495da5243842907bcc93e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://653c91baa2876d0c4c6272c141eade4a4471a81518ed664f5a56c38d0576e34e",
+				"dweb:/ipfs/QmZtNra5hMkERWdgEKZFWxepFohM2zqwFWNj8uRpFxN2MP"
+			]
+		},
+		"midas-joe-v2/src/LBRouter.sol": {
+			"keccak256": "0x93678ee3f4d279c2e03d9ff1d6b12c6bd3b4038e593b5bda3b1cb2526159d413",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://086b5238fb71d1750fc293fbbd255eb695c2072263e09d2885455b7d5298c408",
+				"dweb:/ipfs/QmUNXZWKmteAWFYnDYE8bc3wwAm5CkALLCt6ZS5rwZZm1g"
+			]
+		},
+		"midas-joe-v2/src/interfaces/IJoeFactory.sol": {
+			"keccak256": "0x7ba524c998b232940e31bb23442fbd169b713139a7c3732c230fdc2f1cfca95f",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://36362db6fd6fa7af35472384a837db6f473f74a1240f3bbc678ae397ea040011",
+				"dweb:/ipfs/QmQEcRHkvoucYxaZw1sWqGUE9qPtdhiwq8MCeeNCuaBMxz"
+			]
+		},
+		"midas-joe-v2/src/interfaces/IJoePair.sol": {
+			"keccak256": "0x4316e4fa33273bdbb7f244d9b6f5e8d054946aee41634d7cf2e945fd1227ce48",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8e01e9399b549e23eeee194af8eeedc3a4471e47263f7509af4b1564de1a908a",
+				"dweb:/ipfs/QmXRXPQkGPRrUZj5DLKQyUMDVMEnroyWEbVaYmC7BcKkmL"
+			]
+		},
+		"midas-joe-v2/src/interfaces/ILBFactory.sol": {
+			"keccak256": "0xf6ec8a22aeb373cb135407e49b43b5c0025c028ba36c81c773ad776bffcafe99",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d88b893d9e13c3b71029a9dd7d13c1173cc5aa8617f37cbd9b53df111872a4e",
+				"dweb:/ipfs/QmVCa2tMCYCEiBXjz88hvSf8q7cgVDL7yRxnQsuRe6FShD"
+			]
+		},
+		"midas-joe-v2/src/interfaces/ILBFlashLoanCallback.sol": {
+			"keccak256": "0x0ad4de9217ea804336d10f8200c442f1be75a22fed5d64e0d9d5334f6fcc7f55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aab52dd79579de997ec44e79275ea8d08bd2da05cf6b3ba821bea01e5639748d",
+				"dweb:/ipfs/QmazDbWMPGanUbq3iVuSAbZtpLCihy3HYSbH5RvHsLUqRt"
+			]
+		},
+		"midas-joe-v2/src/interfaces/ILBPair.sol": {
+			"keccak256": "0xa1820d518ee8446623cc021b4b9d66e49b23cbdc28c5a49b2877d5d63312a6f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5c9e58707685d956b641ddbce959720d61922e359141411c980da549bdf20c31",
+				"dweb:/ipfs/QmVozer8dDmhy72YQTNYeavXoXTU3cvinX4aXWpQp9QRPk"
+			]
+		},
+		"midas-joe-v2/src/interfaces/ILBRouter.sol": {
+			"keccak256": "0x5fb0b5a1fca6140e84e25b262e1706e9275cff0ddde2a9ebb43af8035bd970d3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://446386f93f5b799b2da6adaee72d3325cc3e7cec371445c7e3bc406d55f8e126",
+				"dweb:/ipfs/QmSVEPqKJYVSdpXuVM1C9Ys826V4FXarnZGsLjnnv7yCug"
+			]
+		},
+		"midas-joe-v2/src/interfaces/ILBToken.sol": {
+			"keccak256": "0xde04a8cc8ff40a180aa1cb6fa1a9eb8717ee0b98e14e49aee847a5f6de9df55c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0be14cc501106c758b4e87a64ac512cf4eeafca2bf20c01b7fdec11b284901ed",
+				"dweb:/ipfs/QmRYNdM3GXFXsqVm8aHKbvi6Hfm8F4ohv3wxkoFKbN56Zz"
+			]
+		},
+		"midas-joe-v2/src/interfaces/IPendingOwnable.sol": {
+			"keccak256": "0x4c51408f2586a703c922f504c61f92811c53680d2f604aa436baa7dda89f10cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://893108ef6befefd6a154d754271dba3505df7c55f53ed3af7c700cbcc1c5ed42",
+				"dweb:/ipfs/QmURW3zDuVNdgi2n8GEihihbTZ8mxvpjUrbQAqs2t4pKnP"
+			]
+		},
+		"midas-joe-v2/src/interfaces/IWETH.sol": {
+			"keccak256": "0x5f20f1c460e07ce12bc2023319b1062e83355bd4213fff9100126bcaff7b4e5f",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://458ce24c91b921b4302abcb728cb7b2090b166b85db0fb3b4acf7ad84446a051",
+				"dweb:/ipfs/QmTsFBvjGgkqA1Zao7EMtgPCBy5vn3E8yXtPHgoGG71TNe"
+			]
+		},
+		"midas-joe-v2/src/libraries/BinHelper.sol": {
+			"keccak256": "0xe364497f7c55d363711aea744090c9e6e0270a62b6a350074f3db9d9b7f13aec",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://38ca88d51bbef9b3b26b629af0df9c9572599d6f6d8dfdf2111f4626b34a49f9",
+				"dweb:/ipfs/QmamJBBBqh4D3LNg3cJLaiJdryMjfa8LTVuMPR2iwvpe81"
+			]
+		},
+		"midas-joe-v2/src/libraries/BitMath.sol": {
+			"keccak256": "0xf6a2d3055de0fa5f3ba8791901f7694a40dbfca7d6a447a17c70993325fc02f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b551bc04ac6e4c6848d48bc83b941d5a2950ffe5a5cd57f8e42d66e82d1c1084",
+				"dweb:/ipfs/QmZb8SGo4e3eiqrB62r1A4Txx3zMMZJtSavEXAcvbovL9J"
+			]
+		},
+		"midas-joe-v2/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"midas-joe-v2/src/libraries/FeeDistributionHelper.sol": {
+			"keccak256": "0x388759a86992f874dd66102f3270bb272d7d3470f89b2742ce16fd59c0437f1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b872c7f7bee73bb23a9d578cd9ed74e90993d14e7e66d7a98d393a75d678cb0",
+				"dweb:/ipfs/QmXee99JjK3SJX5xS3eMHwnyJ51bYCvT6j5qkuvg11t8wn"
+			]
+		},
+		"midas-joe-v2/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x05fa546412c82d738c03919239bbbe83c1caaf8982af3e85d4ef72709c3e62bc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d893bed925dd278876702a8cb9fab494bf754fadd82d008224600bd902aabb2a",
+				"dweb:/ipfs/QmYgjkHieFSK8zFv2M3UNdNKRspgJuF4S4qNDbvweBQj79"
+			]
+		},
+		"midas-joe-v2/src/libraries/JoeLibrary.sol": {
+			"keccak256": "0x29dd72dd0a33deb88ea424f21ec50116bfd2f932449fdfae11ce9f4addfae476",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a32cf7cfa9ee435b5f7450321e2513a1f54f403f74dcd8e65579f0bdc146e94c",
+				"dweb:/ipfs/Qma9SjvYQcMGuEGxKxLicCMAYNsXtFx3yxcBkHfBiyTqGL"
+			]
+		},
+		"midas-joe-v2/src/libraries/Math128x128.sol": {
+			"keccak256": "0x33202d8738fe0334bff67f2ad4568f2669ef00b86ad252803a217cd9a913921f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e32450665cc7ae8c0b9907ea0451dbe5ea29aea21f3967ccb764729d54bff30",
+				"dweb:/ipfs/QmPh5GkHYYCqf2328usjFpGi3BLKgKakjsFHBKjp7regK1"
+			]
+		},
+		"midas-joe-v2/src/libraries/Math512Bits.sol": {
+			"keccak256": "0x2a00e56dc0280a311b6c750dcd753a67cf0e67dc27a18b6ac531773275d7e389",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d5dac5d5f31b457992dadc950b1a00019360c0a8999e6b49533d1f45fa4a4f9f",
+				"dweb:/ipfs/QmbahMDjLC33HNSciBSJDta4TBHokJfyDvAhnWDRem4dzm"
+			]
+		},
+		"midas-joe-v2/src/libraries/SafeCast.sol": {
+			"keccak256": "0x171ac968ef2f498a9ff6f8aca58eaa6070bfa245781d701f74cfca62f7ff85f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4fca7527eb62b9f1bd20ab72fe5024f64e03de0666991b3a54fc63864ff78d6",
+				"dweb:/ipfs/QmWBxZ4BXd3SMm9XSWmCzULCNpyj5ocTohr26mPoye7vJq"
+			]
+		},
+		"midas-joe-v2/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		},
+		"midas-joe-v2/src/libraries/SwapHelper.sol": {
+			"keccak256": "0xa42042f94baa8275ec12a18eaaa370313e8763b0bc2e24594f2343e7cb382143",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0a61653f607ee720eb9f94ddcdcd42035a01dae383db456821d573b9c6c11e6",
+				"dweb:/ipfs/QmdF35iTxbdnqe9kUCtdULNaHgrG7NyDW4JaLCRK5cxBFH"
+			]
+		},
+		"midas-joe-v2/src/libraries/TokenHelper.sol": {
+			"keccak256": "0x1e637d2fb808f03d2eb4d871420bb175aaca4ee3370a0e0c54bb8dd06d06767c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://daa21bd5e2f99c4a93aa0b0fc2311bf12080da473089325130285f1dcc99e814",
+				"dweb:/ipfs/QmYjoxAVkAAJeQYydLi9xEH7ATDJoBYMZ3WDe8hZ2cbyZM"
+			]
+		}
+	},
+	"version": 1
+}

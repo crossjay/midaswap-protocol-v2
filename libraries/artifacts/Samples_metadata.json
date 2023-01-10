@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Liquidity Book Sample Helper Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Helper contract used for oracle samples operations",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/libraries/Samples.sol": "Samples"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Midas/joe-v2-main/src/libraries/Decoder.sol": {
+			"keccak256": "0xe12ecacbd1d520251a148fb671f682fac728e48ec3e7bfcfdd8f9765fe2b5e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e63ed2ea395acf3a99ef623c94740ebf4b1b2fff1913b6cff3b305950862210",
+				"dweb:/ipfs/QmfPcMVaAwJ7nGhhgpNg7bxXHPKPi4NeShtzuy1wX8n9MZ"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Encoder.sol": {
+			"keccak256": "0xf0d8d1fa36901a5c3e5384462fe86225b3ec9451263be8919c8f0e23e4320d11",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cbbe0f3c8e627da4bfc7ab940ecbe92c78e41cf283519c44e2db323f94e673f7",
+				"dweb:/ipfs/Qmbd7vFVU617bYAtFXhXNQm499qr1Qkoo1FKnjBVerNpZJ"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Samples.sol": {
+			"keccak256": "0xc10478b358710ef0c558c3c52c1ead881d3bccccc7d951923aca53d21f2ffafe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29beee63e29b37a3717ef08af651d7fa240723ca04a7d0755e035b32a47d05bd",
+				"dweb:/ipfs/QmUjjtEQAH6ZaLoUUrsDrPyJf4FbtTiGDaMSYkCAWEfinw"
+			]
+		}
+	},
+	"version": 1
+}
