@@ -1,0 +1,90 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"parameters1()": "e79129ce"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "parameters1",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "factory",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "tokenX",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "tokenY",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "lpToken",
+					"type": "address"
+				},
+				{
+					"internalType": "uint128",
+					"name": "feeRate",
+					"type": "uint128"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

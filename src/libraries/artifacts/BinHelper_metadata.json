@@ -1,0 +1,168 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {},
+			"title": "Liquidity Book Bin Helper Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Contract used to convert bin ID to price and back",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/Midas_main/src/libraries/BinHelper.sol": "BinHelper"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+				"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"Midas/Midas_main/src/MidasErrors.sol": {
+			"keccak256": "0x2cf6ff89560519e8fc1ce9ad4221b8de847aeef38bc1df1a4f175d85da3944f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f26c8b92cf910634fda863f210450c86c3e719b3432d8145295ec8c3a1713076",
+				"dweb:/ipfs/Qme8qWVoMumG4aGoepPU99wgzUCgbKjo2agGqtnEsoBbwa"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasFactory721.sol": {
+			"keccak256": "0x0b05fcdc40dc39749984b483eb63a59a6d7e8e9beb0410a3f2178b5455b9dd3b",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://e92ff774a1fd61b1b74e46b50f48b40f1786f5063e1a3cf116e937f007eaf8af",
+				"dweb:/ipfs/QmfMQVzi2A12Hhte5ypSMR1DjeFriHSYWdDtwYzXon5nqu"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasPair721.sol": {
+			"keccak256": "0x57de7706021d66aac5e130708fd8f4c1c358636bad17e9c8b90334ed26d84146",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://45bc1d911d92b811b0ada56ea8bba1c4ffec464c29d20715d6bd0c844bae5b59",
+				"dweb:/ipfs/Qmb39grCUVPmRkWUAiSyXT84fgSQTDZn4BNbqA3imoEp9H"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IRoyaltyEngineV1.sol": {
+			"keccak256": "0x0b90bf350074d55b2ff4643130bf3d53516fc606f945ff5009e38cce6e0eb718",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4793505635b1a6e924607d78bd9920c236e52f89fa05d4d1daa24fee6b52a1d3",
+				"dweb:/ipfs/QmRAN7n3Wydh8UqyDscNGGCJTkFG9XfeeFrj9jiJj8xGY5"
+			]
+		},
+		"Midas/Midas_main/src/libraries/BinHelper.sol": {
+			"keccak256": "0x8e8cb32e7a855d35d5d2b96535d1374bc12ff481346381cf313beabef23a28c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://703465416aba243ad78cb6040f47320641f5ba05406edb33ac6a7962ff226a3e",
+				"dweb:/ipfs/QmW4wyYZDn1zZEp3agNV1P8S5CtrwHwGSrMgXgxarbYHPt"
+			]
+		},
+		"Midas/Midas_main/src/libraries/BitMath.sol": {
+			"keccak256": "0xf6a2d3055de0fa5f3ba8791901f7694a40dbfca7d6a447a17c70993325fc02f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b551bc04ac6e4c6848d48bc83b941d5a2950ffe5a5cd57f8e42d66e82d1c1084",
+				"dweb:/ipfs/QmZb8SGo4e3eiqrB62r1A4Txx3zMMZJtSavEXAcvbovL9J"
+			]
+		},
+		"Midas/Midas_main/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"Midas/Midas_main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x842c621c4992f27dcc18c22d897e97167f170993693234d4abd18dca51bcc976",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://073e55231091de0bc40befd60329b741a8c96f48a8b5ecfa9a45a38e4b543d38",
+				"dweb:/ipfs/Qmc4oh8VB6V6aKzSH7WitkUWn7GBJuW1Vsom1JAXj8QEuC"
+			]
+		},
+		"Midas/Midas_main/src/libraries/Math128x128.sol": {
+			"keccak256": "0x3eeae8cddefad67f8de9ad5a9ef063a5fcf4910dcff5324f991c137d8cae871d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ff7e3403e9f111b3c4a65d9442255623914a3f5d089c160e110171235e810417",
+				"dweb:/ipfs/QmPikUEyCQUjBzCuZ99UvPC42hqmzh5hs9pabMxynkWeGe"
+			]
+		},
+		"Midas/Midas_main/src/libraries/Math512Bits.sol": {
+			"keccak256": "0x45deb1daeca99962db9ccfd0b52f39249187dff08bd4e342171ba3d3d5ca12cc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ae7a2f3e0ad31e4df33650669937297d95dd415003847122f85bdeba4ebef93",
+				"dweb:/ipfs/QmTb4sWd2UCJzrJyenbeqoUKBC5uStBMqdQ9P5gGfYP7T6"
+			]
+		},
+		"Midas/Midas_main/src/libraries/SafeCast.sol": {
+			"keccak256": "0xf2fe023b9fccbefe04057b0af80c2e17656aab6c3835497bc6901e203694aac7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3855b2682a9fc078a99a0f490791572e8b6cf980ed6155bf54ccbdf08d86860d",
+				"dweb:/ipfs/QmXszTi5eYzckLuhmTTMMYTXrJMaaz2KW1fAXuoPQAxF5S"
+			]
+		},
+		"Midas/Midas_main/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		},
+		"Midas/Midas_main/src/libraries/TokenHelper.sol": {
+			"keccak256": "0x86f8b2bb1ba889db03e8bacf33c5d84520352ef496534e9e39dde416203eeabe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://88088d03d749885b66adea8eb12322801e21057f7844429a41ccd49e0d76cc93",
+				"dweb:/ipfs/QmY9UCVM8YhAgjNg9XcpCNYFGC9tFCxkj8eQg47bW9ZKYg"
+			]
+		}
+	},
+	"version": 1
+}

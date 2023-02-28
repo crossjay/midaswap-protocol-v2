@@ -1,0 +1,167 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "getRoyalty",
+				"outputs": [
+					{
+						"internalType": "address payable[]",
+						"name": "recipients",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "getRoyaltyView",
+				"outputs": [
+					{
+						"internalType": "address payable[]",
+						"name": "recipients",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Lookup engine interface",
+			"kind": "dev",
+			"methods": {
+				"getRoyalty(address,uint256,uint256)": {
+					"params": {
+						"tokenAddress": "- The address of the token",
+						"tokenId": "- The id of the token",
+						"value": "- The value you wish to get the royalty of returns Two arrays of equal length, royalty recipients and the corresponding amount each recipient should get"
+					}
+				},
+				"getRoyaltyView(address,uint256,uint256)": {
+					"params": {
+						"tokenAddress": "- The address of the token",
+						"tokenId": "- The id of the token",
+						"value": "- The value you wish to get the royalty of returns Two arrays of equal length, royalty recipients and the corresponding amount each recipient should get"
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getRoyalty(address,uint256,uint256)": {
+					"notice": "Get the royalty for a given token (address, id) and value amount.  Does not cache the bps/amounts.  Caches the spec for a given token address "
+				},
+				"getRoyaltyView(address,uint256,uint256)": {
+					"notice": "View only version of getRoyalty "
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/Midas_main/src/interfaces/IRoyaltyEngineV1.sol": "IRoyaltyEngineV1"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IRoyaltyEngineV1.sol": {
+			"keccak256": "0x0b90bf350074d55b2ff4643130bf3d53516fc606f945ff5009e38cce6e0eb718",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4793505635b1a6e924607d78bd9920c236e52f89fa05d4d1daa24fee6b52a1d3",
+				"dweb:/ipfs/QmRAN7n3Wydh8UqyDscNGGCJTkFG9XfeeFrj9jiJj8xGY5"
+			]
+		}
+	},
+	"version": 1
+}

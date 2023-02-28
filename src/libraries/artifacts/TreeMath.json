@@ -1,0 +1,68 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208a7f358bef96d475163d225d94cfcd220d3c7708c96c612ddaf041539eef122864736f6c634300080a0033",
+			"opcodes": "PUSH1 0x56 PUSH1 0x37 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x2A JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP11 PUSH32 0x358BEF96D475163D225D94CFCD220D3C7708C96C612DDAF041539EEF12286473 PUSH16 0x6C634300080A00330000000000000000 ",
+			"sourceMap": "251:6032:13:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;251:6032:13;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208a7f358bef96d475163d225d94cfcd220d3c7708c96c612ddaf041539eef122864736f6c634300080a0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP11 PUSH32 0x358BEF96D475163D225D94CFCD220D3C7708C96C612DDAF041539EEF12286473 PUSH16 0x6C634300080A00330000000000000000 ",
+			"sourceMap": "251:6032:13:-:0;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "17200",
+				"executionCost": "103",
+				"totalCost": "17303"
+			},
+			"internal": {
+				"_getBottomId(uint24,uint24)": "infinite",
+				"_getIdsFromAbove(uint24)": "infinite",
+				"addToTree(mapping(uint256 => uint256)[3] storage pointer,uint256)": "infinite",
+				"findFirstBin(mapping(uint256 => uint256)[3] storage pointer,uint24,bool)": "infinite",
+				"removeFromTree(mapping(uint256 => uint256)[3] storage pointer,uint256)": "infinite",
+				"updateActiveBin(mapping(uint256 => uint256)[3] storage pointer,mapping(uint256 => uint256)[3] storage pointer,struct IMidasPair721.PairInformation memory)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": []
+}

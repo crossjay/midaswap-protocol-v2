@@ -1,0 +1,662 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "accountsLength",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "idsLength",
+						"type": "uint256"
+					}
+				],
+				"name": "LBToken__LengthMismatch",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "LBToken__SelfApproval",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "LBToken__SpenderNotApproved",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "LBToken__TransferExceedsBalance",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LBToken__TransferFromOrToAddress0",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LBToken__TransferToSelf",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "ApprovalForAll",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "ids",
+						"type": "uint256[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "TransferBatch",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "TransferSingle",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_account",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_accounts",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_ids",
+						"type": "uint256[]"
+					}
+				],
+				"name": "balanceOfBatch",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "batchBalances",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_spender",
+						"type": "address"
+					}
+				],
+				"name": "isApprovedForAll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_ids",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "safeBatchTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_spender",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_approved",
+						"type": "bool"
+					}
+				],
+				"name": "setApprovalForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "_interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {
+				"balanceOf(address,uint256)": {
+					"params": {
+						"_account": "The address of the owner",
+						"_id": "The token id"
+					},
+					"returns": {
+						"_0": "The amount of tokens of type `id` owned by `_account`"
+					}
+				},
+				"balanceOfBatch(address[],uint256[])": {
+					"params": {
+						"_accounts": "The addresses of the owners",
+						"_ids": "The token ids"
+					},
+					"returns": {
+						"batchBalances": "The balance for each (account, id) pair"
+					}
+				},
+				"isApprovedForAll(address,address)": {
+					"params": {
+						"_owner": "The address of the owner",
+						"_spender": "The address of the spender"
+					},
+					"returns": {
+						"_0": "True if `spender` is approved to transfer `_account`'s tokens"
+					}
+				},
+				"name()": {
+					"returns": {
+						"_0": "The name of the token"
+					}
+				},
+				"safeBatchTransferFrom(address,address,uint256[],uint256[])": {
+					"params": {
+						"_amounts": "The list of amounts to send",
+						"_from": "The address of the owner of the tokens",
+						"_ids": "The list of token ids",
+						"_to": "The address of the recipient"
+					}
+				},
+				"safeTransferFrom(address,address,uint256,uint256)": {
+					"params": {
+						"_amount": "The amount to send",
+						"_from": "The address of the owner of the token",
+						"_id": "The token id",
+						"_to": "The address of the recipient"
+					}
+				},
+				"setApprovalForAll(address,bool)": {
+					"params": {
+						"_approved": "The boolean value to grant or revoke permission",
+						"_spender": "The address of the spender"
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"params": {
+						"_interfaceId": "The interface identifier"
+					},
+					"returns": {
+						"_0": "Whether the interface is supported (true) or not (false)"
+					}
+				},
+				"symbol()": {
+					"returns": {
+						"_0": "The symbol of the token"
+					}
+				},
+				"totalSupply(uint256)": {
+					"details": "This is the amount of token of type `id` minted minus the amount burned",
+					"params": {
+						"_id": "The token id"
+					},
+					"returns": {
+						"_0": "The total supply of that token id"
+					}
+				}
+			},
+			"stateVariables": {
+				"_balances": {
+					"details": "Mapping from token id to account balances"
+				},
+				"_spenderApprovals": {
+					"details": "Mapping from account to spender approvals"
+				},
+				"_totalSupplies": {
+					"details": "Mapping from token id to total supplies"
+				}
+			},
+			"title": "Liquidity Book Token",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"LBToken__SpenderNotApproved(address,address)": [
+					{
+						"notice": "LBToken errors "
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"balanceOf(address,uint256)": {
+					"notice": "Returns the amount of tokens of type `id` owned by `_account`"
+				},
+				"balanceOfBatch(address[],uint256[])": {
+					"notice": "Return the balance of multiple (account/id) pairs"
+				},
+				"isApprovedForAll(address,address)": {
+					"notice": "Returns true if `spender` is approved to transfer `_account`'s tokens"
+				},
+				"name()": {
+					"notice": "Returns the name of the token"
+				},
+				"safeBatchTransferFrom(address,address,uint256[],uint256[])": {
+					"notice": "Batch transfers `_amount` tokens of type `_id` from `_from` to `_to`"
+				},
+				"safeTransferFrom(address,address,uint256,uint256)": {
+					"notice": "Transfers `_amount` token of type `_id` from `_from` to `_to`"
+				},
+				"setApprovalForAll(address,bool)": {
+					"notice": "Grants or revokes permission to `spender` to transfer the caller's tokens, according to `approved`"
+				},
+				"supportsInterface(bytes4)": {
+					"notice": "Returns whether this contract implements the interface defined by `interfaceId` (true) or not (false)"
+				},
+				"symbol()": {
+					"notice": "Returns the symbol of the token, usually a shorter version of the name"
+				},
+				"totalSupply(uint256)": {
+					"notice": "Returns the total supply of token of type `id`"
+				}
+			},
+			"notice": "The LBToken is an implementation of a multi-token. It allows to create multi-ERC20 represented by their ids",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/joe-v2-main/src/LBToken.sol": "LBToken"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+			"keccak256": "0xc3ff3f5c4584e1d9a483ad7ced51ab64523201f4e3d3c65293e4ca8aeb77a961",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d7d3dd6067a994690471b5fc71b6f81fac3847798b37d404f74db00b4d3c3d0e",
+				"dweb:/ipfs/QmRHF1RarifjNi93RttouNPkYZGyu6CD926PgRDzD5iL35"
+			]
+		},
+		"Midas/joe-v2-main/src/LBErrors.sol": {
+			"keccak256": "0xdef68e9e8f585f2bbfa294a1df13a774e9d6ed3d0bc495da5243842907bcc93e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://653c91baa2876d0c4c6272c141eade4a4471a81518ed664f5a56c38d0576e34e",
+				"dweb:/ipfs/QmZtNra5hMkERWdgEKZFWxepFohM2zqwFWNj8uRpFxN2MP"
+			]
+		},
+		"Midas/joe-v2-main/src/LBToken.sol": {
+			"keccak256": "0x594373dac369b243649ffb1c7106302dcc9958136ec2787eac2515ee0aa2e502",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://296fc4d6b33e3cd74b09bb2f103b10692ae1b845f2e2abcd7253ae6def5e0085",
+				"dweb:/ipfs/QmW9mbk5rA3SjAmxFcH2bVbp8eEpyy8USRVNk2UfiTi1ds"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFactory.sol": {
+			"keccak256": "0x2a84358d50ab6b88a086f12b72da98612b45a6c50953c0121b9ea1380d9fd8f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://949b9189318bbd8fcbff02d2d060415a373c7c3963033d13ff25d2f6bc7f70d9",
+				"dweb:/ipfs/QmRcWDcziTBda2uQYtqiPT6UZWci6LjzpGR6bA1oUBgA5D"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBFlashLoanCallback.sol": {
+			"keccak256": "0x0ad4de9217ea804336d10f8200c442f1be75a22fed5d64e0d9d5334f6fcc7f55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aab52dd79579de997ec44e79275ea8d08bd2da05cf6b3ba821bea01e5639748d",
+				"dweb:/ipfs/QmazDbWMPGanUbq3iVuSAbZtpLCihy3HYSbH5RvHsLUqRt"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBPair.sol": {
+			"keccak256": "0x4cfd8b69cd4e27dd50dda614eb64c4a342956005a6a34ca825a539e092695742",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://489af793773f1edd5bf8d5beb150f8e73d510355a665415187a2336c9c6b3fbb",
+				"dweb:/ipfs/QmcweZYbWBbyothear8umd5e9axLC9thnMoriHz4aSnhu5"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/ILBToken.sol": {
+			"keccak256": "0xde04a8cc8ff40a180aa1cb6fa1a9eb8717ee0b98e14e49aee847a5f6de9df55c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0be14cc501106c758b4e87a64ac512cf4eeafca2bf20c01b7fdec11b284901ed",
+				"dweb:/ipfs/QmRYNdM3GXFXsqVm8aHKbvi6Hfm8F4ohv3wxkoFKbN56Zz"
+			]
+		},
+		"Midas/joe-v2-main/src/interfaces/IPendingOwnable.sol": {
+			"keccak256": "0x4c51408f2586a703c922f504c61f92811c53680d2f604aa436baa7dda89f10cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://893108ef6befefd6a154d754271dba3505df7c55f53ed3af7c700cbcc1c5ed42",
+				"dweb:/ipfs/QmURW3zDuVNdgi2n8GEihihbTZ8mxvpjUrbQAqs2t4pKnP"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x05fa546412c82d738c03919239bbbe83c1caaf8982af3e85d4ef72709c3e62bc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d893bed925dd278876702a8cb9fab494bf754fadd82d008224600bd902aabb2a",
+				"dweb:/ipfs/QmYgjkHieFSK8zFv2M3UNdNKRspgJuF4S4qNDbvweBQj79"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeCast.sol": {
+			"keccak256": "0x171ac968ef2f498a9ff6f8aca58eaa6070bfa245781d701f74cfca62f7ff85f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4fca7527eb62b9f1bd20ab72fe5024f64e03de0666991b3a54fc63864ff78d6",
+				"dweb:/ipfs/QmWBxZ4BXd3SMm9XSWmCzULCNpyj5ocTohr26mPoye7vJq"
+			]
+		},
+		"Midas/joe-v2-main/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		}
+	},
+	"version": 1
+}

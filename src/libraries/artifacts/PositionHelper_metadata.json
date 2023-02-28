@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/Midas_main/src/libraries/PositionHelper.sol": "PositionHelper"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Midas/Midas_main/src/libraries/PositionHelper.sol": {
+			"keccak256": "0xecfb9d584f776b6e7cecb547197c5a5c39445736141c686688ec8c2ef953a9ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://64a2062429fbe075e0bfc265bddb98ba810a1db38edf4e136acb6f3944bb4c9b",
+				"dweb:/ipfs/QmejeTrK2veJn241kzpceXCWv4q4ozR9AhJoVmjJtx79nV"
+			]
+		}
+	},
+	"version": 1
+}

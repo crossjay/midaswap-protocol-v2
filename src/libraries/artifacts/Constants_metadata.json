@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "midaswap",
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"CALLBACK_SUCCESS": {
+					"details": "The expected return after a successful flash loan"
+				}
+			},
+			"title": "Midas ",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Set of constants for Liquidity Book contracts",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/Midas_main/src/libraries/Constants.sol": "Constants"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Midas/Midas_main/src/libraries/Constants.sol": {
+			"keccak256": "0xb17f3fc163b955a2b4440dcc2d543c65690593ee06ce6828729eb368cd0fff47",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://64739dca68f859d57f67ddba30a97119d7d3ac1e6c03a5e9a3deb5eec4178a34",
+				"dweb:/ipfs/QmV4Dphs8sxx3AdjcfpRQwesKKLCT3PgFrYJSM7nGxJDhk"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,675 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract IMidasFactory721",
+						"name": "_factory",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IWETH",
+						"name": "_weth",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IRoyaltyEngineV1",
+						"name": "_royaltyEngine",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "TokenHelper__CallFailed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TokenHelper__NonContract",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TokenHelper__TransferFailed",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_pair",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24[]",
+						"name": "_ids",
+						"type": "uint24[]"
+					}
+				],
+				"name": "_getAmountsToAdd",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "ftAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24[]",
+						"name": "_ids",
+						"type": "uint24[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "addLiquidityERC20",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "idAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpTokenId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24[]",
+						"name": "_ids",
+						"type": "uint24[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "addLiquidityERC721",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "idAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpTokenId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24[]",
+						"name": "_ids",
+						"type": "uint24[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "addLiquidityETH",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "idAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpTokenId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "buyItems",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ftAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "buyItemsWithETH",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ftAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "factory",
+				"outputs": [
+					{
+						"internalType": "contract IMidasFactory721",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_pair",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					}
+				],
+				"name": "getMinAmountIn",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24[]",
+						"name": "_ids",
+						"type": "uint24[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "openLimitOrder",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "idAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpTokenId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_lpTokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "nftAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ftAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_lpTokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidityETH",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "nftAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ftAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "royaltyEngine",
+				"outputs": [
+					{
+						"internalType": "contract IRoyaltyEngineV1",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "sellItems",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ftAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenX",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenY",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_tokenIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "sellItemsToETH",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ftAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "weth",
+				"outputs": [
+					{
+						"internalType": "contract IWETH",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "midaswap",
+			"kind": "dev",
+			"methods": {},
+			"title": "Midas Router",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"TokenHelper__NonContract()": [
+					{
+						"notice": "TokenHelper errors "
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"notice": "Router for trades and liquidity managements against the Midaswap",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/Midas_main/src/MidasRouter.sol": "MidasRouter"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+				"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"Midas/Midas_main/src/MidasErrors.sol": {
+			"keccak256": "0x2cf6ff89560519e8fc1ce9ad4221b8de847aeef38bc1df1a4f175d85da3944f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f26c8b92cf910634fda863f210450c86c3e719b3432d8145295ec8c3a1713076",
+				"dweb:/ipfs/Qme8qWVoMumG4aGoepPU99wgzUCgbKjo2agGqtnEsoBbwa"
+			]
+		},
+		"Midas/Midas_main/src/MidasRouter.sol": {
+			"keccak256": "0xf3036005714f63ab6241d640d2d4affc565d84451ce103fa257b0c522b847d17",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://520313896fb384c0bd61a9f2a8eacdc9d0f2b0cfc060d642f967ef9932bc453e",
+				"dweb:/ipfs/QmZESrZgvB5ShaBDaPSTnjFBDM12Zbr4CBt6xQ69S4q2Le"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasFactory721.sol": {
+			"keccak256": "0x0b05fcdc40dc39749984b483eb63a59a6d7e8e9beb0410a3f2178b5455b9dd3b",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://e92ff774a1fd61b1b74e46b50f48b40f1786f5063e1a3cf116e937f007eaf8af",
+				"dweb:/ipfs/QmfMQVzi2A12Hhte5ypSMR1DjeFriHSYWdDtwYzXon5nqu"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasPair721.sol": {
+			"keccak256": "0x57de7706021d66aac5e130708fd8f4c1c358636bad17e9c8b90334ed26d84146",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://45bc1d911d92b811b0ada56ea8bba1c4ffec464c29d20715d6bd0c844bae5b59",
+				"dweb:/ipfs/Qmb39grCUVPmRkWUAiSyXT84fgSQTDZn4BNbqA3imoEp9H"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasRouter.sol": {
+			"keccak256": "0xe422abf6efe83172a6764f3c3b37b6408e3940bfd7d73bcc7ec32140726c0f42",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://489284fa9305b784637674f86c658b6ea860e2f98a24cb105c47b4be8d939e4a",
+				"dweb:/ipfs/QmPwauknUQbfq6M2occAiRCjNBXJrLqSb6gX3YYsEBswg6"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IRoyaltyEngineV1.sol": {
+			"keccak256": "0x0b90bf350074d55b2ff4643130bf3d53516fc606f945ff5009e38cce6e0eb718",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4793505635b1a6e924607d78bd9920c236e52f89fa05d4d1daa24fee6b52a1d3",
+				"dweb:/ipfs/QmRAN7n3Wydh8UqyDscNGGCJTkFG9XfeeFrj9jiJj8xGY5"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IWETH.sol": {
+			"keccak256": "0x6986a632b8318096faca21e49d8161cbce6120820a689136be2200e70b7212a6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d515266349af82a3261dc70326c6a1b97ab9888b26fb34a562ad1649510a080d",
+				"dweb:/ipfs/QmamNYrv6EBtEZD3fXMzT7E8GGAWVyTkUYN9EXUJm8V4QN"
+			]
+		},
+		"Midas/Midas_main/src/libraries/Constants.sol": {
+			"keccak256": "0xb17f3fc163b955a2b4440dcc2d543c65690593ee06ce6828729eb368cd0fff47",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://64739dca68f859d57f67ddba30a97119d7d3ac1e6c03a5e9a3deb5eec4178a34",
+				"dweb:/ipfs/QmV4Dphs8sxx3AdjcfpRQwesKKLCT3PgFrYJSM7nGxJDhk"
+			]
+		},
+		"Midas/Midas_main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x7bea9c668006f99610a88f0b0af117ea0c6bc27d267fe88ac86b93ae297d3e28",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0fc6f67aaf889ce4ba4e6fd992e088f04c61ebec938ddae7bf1e93c2c5841636",
+				"dweb:/ipfs/QmXY6KwhQXF4Y81sRWvXLGL1Z7jwfuCPcGCi6q4jpWsHQ8"
+			]
+		},
+		"Midas/Midas_main/src/libraries/PriceHelper.sol": {
+			"keccak256": "0xe5e36dfc6eba2f9d218ca914c6e235987bb696340595d3dbeaef2e92d7879074",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d29f1e16e6cdd17cc93c3613860b0ad730fd32fd25550225d98924f9fb754ccf",
+				"dweb:/ipfs/QmaxnvEoPmznTK19fvtwKheTMj8vPArQBDnsVwA76NdMVo"
+			]
+		},
+		"Midas/Midas_main/src/libraries/SafeCast.sol": {
+			"keccak256": "0xcccd5cc5a23d2f6461fc27cfcd1d011b7254bd7deb18e818e47482b59489f1ee",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f3a128bcef28b63922c00660f34db697fdb6c3e435a9afe069d2119ce5769d37",
+				"dweb:/ipfs/QmYHz7GkZwrWUPGpuEk6dErHifrn2HxpE1yZoopNwQhdr5"
+			]
+		},
+		"Midas/Midas_main/src/libraries/TokenHelper.sol": {
+			"keccak256": "0x78c554ade1529d872590540028318820c11ff6dd639ff394d9ba66c526ee108f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a73516494b5396af9de6f03666829b5cfca55707bea74008ee85cd99c48a4fef",
+				"dweb:/ipfs/QmQuA4irmh564ReosWwPkSL1mWFX7AkcAodg9M3eqUh7Yg"
+			]
+		}
+	},
+	"version": 1
+}

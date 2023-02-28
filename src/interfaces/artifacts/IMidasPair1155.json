@@ -1,0 +1,338 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"burn(uint256,address)": "fcd3533c",
+			"buyNFT(address)": "ba79b564",
+			"collectProtocolFees()": "a1af5b9a",
+			"factory()": "c45a0155",
+			"feeParameters()": "98c7adf3",
+			"getBin(uint24)": "0abe9688",
+			"getGlobalFees()": "a582cdaa",
+			"getReservesAndId()": "1b05b83e",
+			"mintFT(uint24[],uint256[],address)": "720b9bbf",
+			"mintNFT(uint24[],uint256[],address)": "c6deab32",
+			"sellNFT(address)": "d3f790d1",
+			"tokenX()": "16dc165b",
+			"tokenY()": "b7d19fc4"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "LPtokenID",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				}
+			],
+			"name": "burn",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "amountX",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amountY",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_to",
+					"type": "address"
+				}
+			],
+			"name": "buyNFT",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "collectProtocolFees",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "amountY",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "factory",
+			"outputs": [
+				{
+					"internalType": "contract IMidasFactory1155",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "feeParameters",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint24",
+					"name": "id",
+					"type": "uint24"
+				}
+			],
+			"name": "getBin",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "reserveX",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "reserveY",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getGlobalFees",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "feesYTotal",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "feesYProtocol",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getReservesAndId",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "reserveX",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "reserveY",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "floorPriceID",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "bestOfferID",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint24[]",
+					"name": "ids",
+					"type": "uint24[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "amounts",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				}
+			],
+			"name": "mintFT",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "amountIn",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "LPtokenID",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint24[]",
+					"name": "ids",
+					"type": "uint24[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "amounts",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				}
+			],
+			"name": "mintNFT",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "binNumbers",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "LPtokenID",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_to",
+					"type": "address"
+				}
+			],
+			"name": "sellNFT",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_amountOut",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "tokenX",
+			"outputs": [
+				{
+					"internalType": "contract IERC1155",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "tokenY",
+			"outputs": [
+				{
+					"internalType": "contract IERC20",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

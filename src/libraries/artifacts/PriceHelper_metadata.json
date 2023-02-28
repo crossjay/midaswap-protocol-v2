@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "arr",
+						"type": "uint256[]"
+					}
+				],
+				"name": "sortDesc",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/Midas_main/src/libraries/PriceHelper.sol": "PriceHelper"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Midas/Midas_main/src/libraries/PriceHelper.sol": {
+			"keccak256": "0xe5e36dfc6eba2f9d218ca914c6e235987bb696340595d3dbeaef2e92d7879074",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d29f1e16e6cdd17cc93c3613860b0ad730fd32fd25550225d98924f9fb754ccf",
+				"dweb:/ipfs/QmaxnvEoPmznTK19fvtwKheTMj8vPArQBDnsVwA76NdMVo"
+			]
+		}
+	},
+	"version": 1
+}

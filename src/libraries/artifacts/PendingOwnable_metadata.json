@@ -1,0 +1,315 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "PendingOwnable__AddressZero",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PendingOwnable__NoPendingOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PendingOwnable__NotOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PendingOwnable__NotPendingOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PendingOwnable__PendingOwnerAlreadySet",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "pendingOwner",
+						"type": "address"
+					}
+				],
+				"name": "PendingOwnerSet",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "becomeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pendingOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "revokePendingOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "pendingOwner_",
+						"type": "address"
+					}
+				],
+				"name": "setPendingOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Trader Joe",
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"returns": {
+						"_0": "The address of the current owner"
+					}
+				},
+				"pendingOwner()": {
+					"returns": {
+						"_0": "The address of the current pending owner"
+					}
+				}
+			},
+			"title": "Pending Ownable",
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"PendingOwnable__NotOwner()": [
+					{
+						"notice": "PendingOwnable errors "
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"becomeOwner()": {
+					"notice": "Transfers the ownership to the new owner (`pendingOwner). Can only be called by the pending owner"
+				},
+				"constructor": {
+					"notice": "Initializes the contract setting the deployer as the initial owner"
+				},
+				"owner()": {
+					"notice": "Returns the address of the current owner"
+				},
+				"pendingOwner()": {
+					"notice": "Returns the address of the current pending owner"
+				},
+				"renounceOwnership()": {
+					"notice": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"revokePendingOwner()": {
+					"notice": "Revoke the pending owner address. This address will not be able to call {becomeOwner} to become the owner anymore. Can only be called by the owner"
+				},
+				"setPendingOwner(address)": {
+					"notice": "Sets the pending owner address. This address will be able to become the owner of this contract by calling {becomeOwner}"
+				}
+			},
+			"notice": "Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions. The ownership of this contract is transferred using the push and pull pattern, the current owner set a `pendingOwner` using {setPendingOwner} and that address can then call {becomeOwner} to become the owner of that contract. The main logic and comments comes from OpenZeppelin's Ownable contract. By default, the owner account will be the one that deploys the contract. This can later be changed with {setPendingOwner} and {becomeOwner}. This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be applied to your functions to restrict their use to the owner",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Midas/Midas_main/src/libraries/PendingOwnable.sol": "PendingOwnable"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+				"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"Midas/Midas_main/src/MidasErrors.sol": {
+			"keccak256": "0xc8c9a02651057daf8080959dacd6c702ab227cae3cf72faf2414f2adcf7285f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6204930d34929fd19074307fd13c74d830aac8031ba786e60050a1e7fc26e2f6",
+				"dweb:/ipfs/QmehyPELNSEbje1zQfuyRwtFwoHHfSVuTn82bbAHPVUexK"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasFactory1155.sol": {
+			"keccak256": "0x4083f233f75daba53a3cefad3028f34c9fa1543c5caad7523609fd4e0c43eba3",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://40bb67ad82e279a37295c5389bfb6ab1f1deb2dc339f66b1d2ad5a129af70f8d",
+				"dweb:/ipfs/QmZsdDqtiQtBnuKaCMo3LVaJ3B2th2jhFa2BkYqVm84bcx"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasFactory721.sol": {
+			"keccak256": "0x5afae55e6f9b6a3e2b17a51e950fd31a7dc9553c290f5b7193091073738540dd",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://c674810e263f967f84bdcd37eee56e5273c263ae9f82c8339ed5d0c3d6724c0f",
+				"dweb:/ipfs/QmaG3VYoRYHsnsJ22qjiDQkT8cs1jwBKFLoV6h2ugPGvyT"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasPair1155.sol": {
+			"keccak256": "0xd9dfbe4e3bb67d10d190d39d9fd65c83b6700f0d02a64760b4ed712c9c5eccb8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d90b6dc11f7d714108f084400168fe90bd507901940454ac79abf8694b0ad78",
+				"dweb:/ipfs/QmTwVpJK4xXYG9pkwxgeibVodD1zhRsQjdQo1ZKqTioBWv"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IMidasPair721.sol": {
+			"keccak256": "0x029017c0befc39ecffd10d9058ceadf21a04933f2efa670d36355f38641580f5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b328da1c33cac2f83c414ae033259a9185827bb7ec00c936594d65a45539c4ad",
+				"dweb:/ipfs/QmT6ReQsKiuh3351BKkeQM8giCRZp9th86gQj2xsPG9Kmd"
+			]
+		},
+		"Midas/Midas_main/src/interfaces/IPendingOwnable.sol": {
+			"keccak256": "0x4c51408f2586a703c922f504c61f92811c53680d2f604aa436baa7dda89f10cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://893108ef6befefd6a154d754271dba3505df7c55f53ed3af7c700cbcc1c5ed42",
+				"dweb:/ipfs/QmURW3zDuVNdgi2n8GEihihbTZ8mxvpjUrbQAqs2t4pKnP"
+			]
+		},
+		"Midas/Midas_main/src/libraries/Constants.sol": {
+			"keccak256": "0xb6d9ce63d36b945ca698438d9e3a2d0b3d2713b7d57f1ff63009965ea2ef78ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54db847ce3ef1bfbea2a4303b1f6bf7d7614b90a6b496a47699e18069826c83",
+				"dweb:/ipfs/QmSTuGvKLWVCgvZN32t3XH6zzj3rmYis7EizMSWgNFpRdN"
+			]
+		},
+		"Midas/Midas_main/src/libraries/FeeHelper.sol": {
+			"keccak256": "0x0552f0e39d636f29aa75c879f5becfa02feaa99aba19154d184c1575fb3e6c67",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e0de227bc564c189e12b84077c4b6ab7ad6c9bde28b88859165f5a75d88e6c5d",
+				"dweb:/ipfs/QmcPcqTGh3D5wfyJYmiMnpX5X5u5QHtruvRASFBFpNUrMF"
+			]
+		},
+		"Midas/Midas_main/src/libraries/PendingOwnable.sol": {
+			"keccak256": "0xe3bb55c150ad4c35da1379a466f0aa59380d597d793d30b6bcbaa2b288d3571e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f87a82cf44e2cfb6c586e1c4e700f90a940a0b28521a4f6d1079d05aed084dff",
+				"dweb:/ipfs/QmXi8hX6KNEUBQoyK8Z7tfcKRWY7HwDr3CcAfnEo6hchhs"
+			]
+		},
+		"Midas/Midas_main/src/libraries/SafeCast.sol": {
+			"keccak256": "0xf2fe023b9fccbefe04057b0af80c2e17656aab6c3835497bc6901e203694aac7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3855b2682a9fc078a99a0f490791572e8b6cf980ed6155bf54ccbdf08d86860d",
+				"dweb:/ipfs/QmXszTi5eYzckLuhmTTMMYTXrJMaaz2KW1fAXuoPQAxF5S"
+			]
+		},
+		"Midas/Midas_main/src/libraries/SafeMath.sol": {
+			"keccak256": "0x38fad00f0157c59a0d9a97b50447d8331ba2e9dc3292e6b7386429782d611e46",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a054f7c5e5794febebf102168f350d8f37814a8fcfac5b9e7916784a379bed47",
+				"dweb:/ipfs/Qmbnh882A1FRvsv2bwXdVoeebxCn3PiUKQKag6uc15dGaW"
+			]
+		}
+	},
+	"version": 1
+}
